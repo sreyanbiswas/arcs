@@ -1,0 +1,188 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body{
+	font-family: 'PT Sans',sans-serif;
+	background-color: #373c56;
+}
+#menu{
+	width: 35px;
+	height: 30px;
+	margin: 30px 0 20px 20px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.bar{
+	height: 5px;
+	width: 100%;
+	background-color: #b81568;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+#bar1{
+	transform: translateY(-4px);
+}
+#bar3{
+	transform: translateY(4px);
+}
+.nav li a{
+	color: #fff;
+	text-decoration: none;
+}
+.nav li a:hover{
+	font-weight: bold;
+}
+.nav li{
+	list-style: none;
+	padding: 16px 0;
+}
+.nav{
+	padding: 0;
+	margin: 0 20px;
+	transition: 0.3s ease;
+	display: none;
+}
+.menu-bg, #menu-bar{
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+.menu-bg{
+	z-index: 1;
+	width: 0;
+	height: 0;
+	margin: 30px 0 20px 20px;
+	background: radial-gradient(circle,#e94498,#b81568);
+	border-radius: 50%;
+	transition: 0.3s ease;
+}
+#menu-bar{
+	z-index: 2;	
+}
+.change-bg{
+	width: 550px;
+	height: 540px;
+	transform: translate(-60%,-30%);
+}
+.change .bar{
+	background-color: white;
+}
+.change #bar1{
+	transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+	transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+	opacity: 0;
+}
+.change{
+	display: block;
+}
+.leftside { width: 45%; height: auto; overflow: hidden; margin-top: 50px;margin-left: 400px;}
+
+.leftside img{  width: 400px;  height: 250px; }
+.logo{
+    width: 100%;
+    height: 100px;
+}
+.logo img{
+    padding-top: 0px;
+    transition: all 0.3s ease-in-out 0s;
+    position: center;
+    padding-left: 520px;
+    padding-right: 520px;
+}
+.ty:hover{
+        cursor: default;
+        transform: rotateY(360deg);
+        transition: all 2s ease-in-out 0s;
+      }
+.rightside{ width: 55%; height: 0px; color: white; text-align: center; margin-top: 0px; padding-left: 220px;}
+
+.rightside h1{ text-align: center;
+    color:#b81568 ;
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-bottom: 0px; } 
+
+.rightside p {  
+    font-size: 1.1rem; padding: 30px 0; }
+
+.rightside button{   font-size: 17px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    background:  linear-gradient(to right,#8A2BE2,#ff5722); 
+    border-radius: 4px 4px 4px 4px;
+    padding: 15px 30px ; 
+}
+.rightside button:hover{
+      background: linear-gradient(57deg, #1E4D92, #00C6A7 );   
+}
+@media only screen and (max-width: 768px){
+  .leftside{
+  	margin-left: 200px;
+  }
+  .leftside img{  width: 200px;  height: 150px; 
+  	                margin-top: 50px;
+               }
+  .rightside h1{
+    font-size: 40px;
+    padding-right:500px;
+    padding-left: 0px;
+  }
+  .logo img{
+    position: center;
+    padding-left: 200px;
+  }
+  .rightside button{
+    font-size: 20px;
+     padding: 20px 30px ;
+     margin-right: 100px;
+  }
+}
+        </style>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+		<title>ARCS REGISTRATION</title>
+	</head>
+	<body>
+		 <div class="logo">
+         <img src="arcs.png" height="150px" class="ty">
+         </div>
+		<div id="menu-bar">
+			<div id="menu" onclick="onClickMenu()">
+				<div id="bar1" class="bar"></div>
+				<div id="bar2" class="bar"></div>
+				<div id="bar3" class="bar"></div>
+			</div>
+			<ul class="nav" id="nav">
+				<li><a href="https://www.computer.org/">Home</a></li>
+				<li><a href="https://www.computer.org/about">About</a></li>
+				<li><a href="https://sreyan.000webhostapp.com">Blog</a></li>
+				<li><a href="http://www.ieeecsvit.com/">Gallery</a></li>
+				<li><a href="http://computer.ieeesiliconvalley.org">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu-bg" id="menu-bg"></div>
+		<script>
+			function onClickMenu(){
+	document.getElementById("menu").classList.toggle("change");
+	document.getElementById("nav").classList.toggle("change");
+	
+	document.getElementById("menu-bg").classList.toggle("change-bg");
+}
+		</script>
+		 <div class="leftside"> 
+          <img src="isometric.png">
+         </div>
+          <div class="rightside"> 
+              <h1>ARCS'20</h1>
+              <a href="https://sreyan.000webhostapp.com"><button>REGISTER</button></a>
+          </div>
+	</body>
+</html>
